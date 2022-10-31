@@ -1,0 +1,28 @@
+extends ./layouts/_layout.pug
+
+
+
+block options 
+
+    - var title   = 'メールアドレスの認証';
+    - var page_id = 'authentication_page';
+
+
+
+block content
+
+    //***** 認証成功メッセージ ここから *****
+
+    //- 認証成功メッセージ
+    .succeed_authentication_msg
+        .msg_content
+            h1 メールを送信しました
+            p 入力されたメールアドレス宛に、パスワード変更用URLが記載されたメールを送信しましたのでご確認ください。
+
+            form( action="", method="post" )
+                input( type="hidden", name="user_mail", value="" )
+                button( type="submit", name="submit_btn", value="authentication" ) もう一度送信する
+
+        .back_btn: a( href="./login.html" ): include ../icons/_arrow-left.pug
+
+    //***** 認証成功メッセージ ここまで *****

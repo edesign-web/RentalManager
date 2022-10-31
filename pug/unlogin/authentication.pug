@@ -1,0 +1,35 @@
+extends ./layouts/_layout.pug
+
+
+
+block options 
+
+    - var title   = 'メールアドレスの認証';
+    - var page_id = 'authentication_page';
+
+
+
+block content
+
+    //***** 認証フォーム ここから *****
+
+    //- 認証フォーム
+    .authentication_form
+        form( action="./succeed-authentication.html", method="post" ) 
+            h1 メールアドレスの認証
+
+            p.form_filed_msg 入力したメールアドレスは登録されていません。
+
+            //- メールアドレス
+            dl.input_field.user_mail_field
+                dt メールアドレス
+                dd: .text_field
+                    input( type="text", name="user_mail" )
+                    p.error_msg 不正な値が入力されています。
+
+            //- 送信ボタン
+            .submut_wrapper: button( type="submit", name="submit_btn", value="authentication" ) メールを送信する
+
+        .back_btn: a( href="./login.html" ): include ../icons/_arrow-left.pug
+
+    //***** 認証フォーム ここまで *****

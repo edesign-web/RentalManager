@@ -1,0 +1,85 @@
+@use "../config" as *;
+
+
+
+//ログインページ
+#login_page{
+    main{
+        padding: 80px 0;
+    }
+}
+
+//ログインフォーム
+#login_page .login_form{
+    width:  800px;
+    margin: 0 auto;
+
+    form{
+        padding:          54px 0 60px;
+        background-color: white;
+        border:           1px solid #eee;
+        border-radius:    6px;
+
+        h1{
+            width:          600px;
+            margin:         0 auto 50px;
+            text-align:     center;
+            line-height:    calc(1em + 12px);
+            font-size:      $fs_5;
+            letter-spacing: 3px;
+            text-indent:    3px;
+            color:          $theme_color;
+        }
+
+        .form_filed_msg{
+            display:          flex;
+            justify-content:  center;
+            padding:          16px 20px;
+            margin-bottom:    56px;
+            background-color: rgba($filed_color, 0.1);
+            line-height:      calc(1em + 8px);
+            font-weight:      $fw_bold;
+            letter-spacing:   1px;
+            text-indent:      1px;
+            color:            $filed_color;
+        }
+
+        .input_field{
+            display: flex;
+            width:   600px;
+            margin:  0 auto;
+
+            &:nth-of-type(n+2){
+                margin-top: 40px;
+            }
+
+            dt{
+                width:          160px;
+                padding-right:  24px;
+                line-height:    40px;
+                font-weight:    $fw_bold;
+                letter-spacing: 1px;
+            }
+
+            dd{
+                width: calc(100% - 160px);
+            }
+        }
+
+        .submut_wrapper{
+            display:         flex;
+            justify-content: center;
+            width:           600px;
+            margin:          56px auto 0;
+        }
+    }
+
+    .reset_password_link{
+        margin-top: 24px;
+
+        a{
+            font-weight:    $fw_bold;
+            letter-spacing: 1px;
+        }
+    }
+}

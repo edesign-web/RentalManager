@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Rental Manager | ログインページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/common/reset.css">
+    <link rel="stylesheet" href="../../css/common/layout.css">
+    <link rel="stylesheet" href="../../css/unlogin/layout.css">
+  </head>
+  <body class="unlogin_page" id="login_page">
+    <header> 
+      <!--****** 画面上部固定バー ここから ******-->
+      <div class="fixed_window_top_bar">
+        <h1><a href="./login.html">Rental Manager</a></h1>
+      </div>
+      <!--****** 画面上部固定バー ここまで ******-->
+    </header>
+    <main>
+      <!--***** ログインフォーム ここから *****-->
+      <div class="login_form">
+        <form action="" method="post"> 
+          <h1>ログインフォーム</h1>
+          <p class="form_filed_msg">メールアドレスまたはパスワードが違います。</p>
+          <dl class="input_field user_id_field">
+            <dt>ユーザーID</dt>
+            <dd>
+              <div class="text_field">
+                <input type="text" name="user_id">
+                <p class="error_msg">不正な値が入力されています。</p>
+              </div>
+            </dd>
+          </dl>
+          <dl class="input_field user_id_field">
+            <dt>パスワード</dt>
+            <dd>
+              <div class="password_field">
+                <input type="password" name="password">
+                <button type="button"></button>
+                <p class="error_msg">不正な値が入力されています。</p>
+              </div>
+            </dd>
+          </dl>
+          <div class="submut_wrapper">
+            <button type="submit" name="submit_btn" value="login">ログインする</button>
+          </div>
+        </form>
+        <p class="reset_password_link"><a href="./authentication.html">パスワードをお忘れですか？</a></p>
+      </div>
+      <!--***** ログインフォーム ここまで *****-->
+    </main>
+  </body>
+</html>
