@@ -254,14 +254,22 @@ let reset_password_form = () => {
                         set_input_error_msg( new_password_field, 'パスワードは半角英小文字大文字数字をそれぞれ1種類以上含む8文字以上で入力してください。' );
 
                     }
+
+                    if( password_confirm_input.value ){
+
+                        if( new_password_input.value === password_confirm_input.value ){
     
-                    if( new_password_input.value === password_confirm_input.value ){
+                            set_input_error_msg( password_confirm_field, '' );
+        
+                        }else{
     
-                        set_input_error_msg( password_confirm_field, '' );
+                            set_input_error_msg( password_confirm_field, 'パスワードが一致しません' );
     
+                        }
+
                     }else{
 
-                        set_input_error_msg( password_confirm_field, 'パスワードが一致しません' );
+                        set_input_error_msg( password_confirm_field, 'パスワードの確認が入力されていません。' );
 
                     }
 
